@@ -3,3 +3,27 @@
 *@
 @{
 }
+
+<div class="login-container">
+    <h2>Войти в аккаунт</h2>
+
+    <form action="login" method="post">
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Login">
+        </div>
+
+    </form>
+
+    <p>Не зарегистрированны? @Html.ActionLink("Зарегистрироваться", "Registration")</p>
+</div>
