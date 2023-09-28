@@ -4,26 +4,28 @@
 @{
 }
 
-<div class="login-container">
-    <h2>Войти в аккаунт</h2>
+<main class="form-signin w-100 m-auto">
+    <form>
+        <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Вход</h1>
 
-    <form action="login" method="post">
-
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">E-mail</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Пароль</label>
         </div>
 
-        <div class="form-group">
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
+        <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Запомнить
+            </label>
         </div>
-
-        <div class="form-group">
-            <input type="submit" value="Login">
-        </div>
-
+        <button class="btn btn-primary w-100 py-2" type="submit">Войти</button>
     </form>
+</main>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <p>Не зарегистрированны? @Html.ActionLink("Зарегистрироваться", "Registration")</p>
-</div>
