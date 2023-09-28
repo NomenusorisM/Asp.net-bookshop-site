@@ -18,9 +18,44 @@ html {
 }
 
 body {
-    background-color: rgba(191, 129, 75, 1);
+    background-color: #F2D0A7;
     margin-bottom: 60px;
     height: 100%;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: unset;
+    height: 40px;
+    padding-right: 8px;
+}
+
+.btn {
+    background-color: #594225;
+    border-color: #F2A341;
+}
+
+.btn:hover {
+    background-color: #F2A341;
+    border-color: #594225;
+}
+
+input:active {
+    border-color: #F2A341;
+}
+
+footer{
+    background-color: #262626;
+}
+
+header {
+    background-color: #262626;
+}
+
+.bcgr-img {
+    filter: brightness(40%);
 }
 
 .form-signin {
@@ -43,6 +78,11 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.form-control:read-write {
+    border-color: #F2A341;
+}
+
 
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -99,7 +139,7 @@ body {
     --bs-btn-border-color: var(--bd-violet-bg);
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-hover-border-color: #594225;
     --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
     --bs-btn-active-color: var(--bs-btn-hover-color);
     --bs-btn-active-bg: #5a23c8;
@@ -112,4 +152,24 @@ body {
 
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
+}
+
+.color-1-hex {
+    color: #F2B33D;
+}
+
+.color-2-hex {
+    color: #F2A341;
+}
+
+.color-3-hex {
+    color: #594225;
+}
+
+.color-4-hex {
+    color: #F2D0A7;
+}
+
+.color-5-hex {
+    color: #262626;
 }
