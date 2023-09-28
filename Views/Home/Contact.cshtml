@@ -3,3 +3,52 @@
 *@
 @{
 }
+<div class="contact-container">
+
+    <h1>Контакты</h1>
+
+    <p>Если у вас возникли вопросы или предложения, пожалуйста, свяжитесь с нами одним из следующих способов:</p>
+
+    <section class="contact-methods">
+
+        <h5>Телефон:</h5>
+        <p>+7 (123) 456-78-90</p>
+
+        <h5>Email:</h5>
+        <p><a href="mailto:info@books4u.com">info@books4u.com</a></p>
+
+        <h5>Адрес:</h5>
+        <p>123456, г. Москва, ул. Книжная, д. 10</p>
+
+        <h5>Часы работы:</h5>
+        <p>Понедельник - Пятница: 9:00 - 18:00</p>
+
+    </section>
+
+    <section class="contact-form">
+
+        <h5>Напишите нам:</h5>
+
+        <form action="@Url.Action("SendFeedback", "Home")" method="post">
+
+            <div class="form-group col-md-4">
+                <label for="name">Ваше имя:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя" required>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Введите адрес электронной почты" required>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="message">Сообщение:</label>
+                <textarea id="message" class="form-control" name="message" rows="3" placeholder="Текст сообщения" required></textarea>
+            </div>
+            
+            <div class="col-md-2" style="margin-top: 8px">
+                <button class="btn btn-primary w-100 py-2" type="submit">Отправить</button>
+            </div>
+        </form>
+    </section>
+</div>
