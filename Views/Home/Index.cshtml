@@ -3,18 +3,23 @@
     //Жупанов Максим П-32
 }
 
+<head>
+    <link rel="stylesheet" href="~/css/carousel.css">
+</head>
+
 <body>
     <main>
-        <div id="myCarousel" class="carousel slide mb-12 carousel-fade" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="bd-placeholder-img bcgr-img" width="100%" height="100%" src="~/Images/indexSlide1.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    <div class="container-fluid">
+            <div class="carousel-inner" >
+                <div class="carousel-item active" style="max-width: 1800px">
+                    <img class="bd-placeholder-img bcgr-img" width="100%" height="100%" src="~/Images/indexSlide1.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    <div class="container">
                         <div class="carousel-caption text-start shadow-lg p-3 mb-5 rounded">
                             <h1>Мир книг в вашем доме</h1>
                             <p>Окунитесь в удивительный мир литературы с нашим интернет-магазином.</p>
@@ -56,6 +61,63 @@
                 <span class="visually-hidden">Следующий</span>
             </button>
         </div>
+
+
+        <div class="container mt-5">
+            <h2 class="text-left mb-4">Новинки недели</h2>
+
+            <div class="row">
+
+                <!-- Книга 1 -->
+                <div class="col-md-5 mb-4 book-container">
+                    <div class="d-flex">
+                        <img src="path-to-your-image1.jpg" alt="Название книги 1" class="book-img">
+                        <div class="ml-3">
+                            <h5>Название книги 1</h5>
+                            <p>Краткое описание первой книги...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+
+                <!-- Книга 2 -->
+                <div class="col-md-5 mb-4 book-container">
+                    <div class="d-flex">
+                        <img src="path-to-your-image2.jpg" alt="Название книги 2" class="book-img">
+                        <div class="ml-3">
+                            <h5>Название книги 2</h5>
+                            <p>Описание второй книги...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Книга 3 -->
+                <div class="col-md-6 mb-4 book-container">
+                    <div class="d-flex">
+                        <img src="path-to-your-image3.jpg" alt="Название книги 3" class="book-img">
+                        <div class="ml-3">
+                            <h5>Название книги 3</h5>
+                            <p>Описание третьей книги...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Книга 4 -->
+                <div class="col-md-6 mb-4 book-container">
+                    <div class="d-flex">
+                        <img src="path-to-your-image4.jpg" alt="Название книги 4" class="book-img">
+                        <div class="ml-3">
+                            <h5>Название книги 4</h5>
+                            <p>Описание четвертой книги...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
 
     </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
