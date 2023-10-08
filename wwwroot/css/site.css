@@ -11,13 +11,17 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #F2B33D;
 }
 
 body {
     background-color: #F2D0A7;
     margin-bottom: 60px;
     height: 100%;
+}
+
+.bcgr-img {
+    filter: brightness(40%);
 }
 
 .logo {
@@ -45,7 +49,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.book-container:hover{
+.book-container:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -60,45 +64,12 @@ body {
     border-color: #594225;
 }
 
-input:active {
-    border-color: #F2A341;
-}
-
-footer{
+footer {
     background-color: #262626;
 }
 
 header {
     background-color: #262626;
-}
-
-.bcgr-img {
-    filter: brightness(40%);
-}
-
-.form-signin {
-    max-width: 330px;
-    padding: 1rem;
-}
-
-.form-signin .form-floating:focus-within {
-    z-index: 2;
-}
-
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.form-control:read-write {
-    border-color: #F2A341;
 }
 
 .color-1-hex {
