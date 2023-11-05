@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ASPNET.Controllers
+namespace BookShop.Controllers
 {
     public class MainController : Controller
     {

@@ -1,4 +1,4 @@
-namespace ASPNET.Models;
+namespace BookShop.Models;
 
 public class ErrorViewModel
 {
