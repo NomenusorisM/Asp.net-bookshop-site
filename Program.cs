@@ -14,6 +14,7 @@ builder.Services.AddControllersWithViews();
 
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connection));
 
 //builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddIdentity<User, IdentityRole>()
