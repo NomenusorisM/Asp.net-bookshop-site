@@ -11,14 +11,6 @@ namespace BookShop.Models;
 // Add profile data for application users by adding properties to the User class
 public class User : IdentityUser
 {
-    [Required]
-    public int Id { get; set; }
-    public string UserName { get; set; }
-    [PasswordPropertyText]
-    public string Password { get; set; }
-    [EmailAddress]
-    public string Email {  get; set; }
-    public DateOnly RegistrationDate { get; set; }
-    public bool IsEmailConfirmed { get; set;}
+    public bool HasPurchases { get; set; }
 }
 
