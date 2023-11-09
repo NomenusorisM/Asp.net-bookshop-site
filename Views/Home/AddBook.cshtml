@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using(Html.BeginForm("AddBook", "Home", FormMethod.Post))
+{
+    @*<input type="hidden" value="@ViewBag.BookId"*@
+    <table>
+        <tr>
+            <td><p>Название книги</p></td>
+            <td><input type="text" name="Title" /> </td>
+        </tr>
+        <tr>
+            <td><p>Описание книги</p></td>
+            <td><input type="text" name="Description" /> </td>
+        </tr>
+        <tr>
+            <td><p>Ссылка на обложку</p></td>
+            <td><input type="text" name="Img"/></td>
+        </tr>
+        <tr>
+            <td><p>Цена</p></td>
+            <td><input type="number" name="Price" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Отправить" /> </td>
+            <td></td>
+        </tr>
+    </table>
+}
