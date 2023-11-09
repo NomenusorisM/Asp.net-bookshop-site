@@ -1,29 +1,32 @@
-﻿@{
+﻿@model BookShop.ViewModels.LoginViewModel
+@{
     <link rel="stylesheet" href="~/css/account.css" asp-append-version="true" />
 }
 <main class="form-signin w-100 m-auto">
-    <form>
+    <form method="post" asp-controller="Account" asp-action="Login"
+        asp-route-returnUrl="@Model.ReturnUrl">
         <img class="mb-6 logo" src="~/images/logo.png" alt="" style="height: 90px;">
         <h1 class="h3 mb-3 fw-normal align-content-center" style="text-align:center">Вход</h1>
 
+        <div asp-validation-summary="ModelOnly"></div>
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">E-mail</label>
+            <input asp-for="Email" class="form-control" placeholder="name@example.com">
+            <label asp-for="Email"></label>
+            <span asp-validation-for="Email"></span>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Пароль</label>
+            <input asp-for="Password" class="form-control" placeholder="Password">
+            <label asp-for="Password"></label>
+            <span asp-validation-for="Password"></span>
         </div>
 
         <div class="form-check text-start my-3">
-            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Запомнить
-            </label>
+            <input asp-for="RememberMe">
+            <label asp-for="RememberMe"></label>
         </div>
-        <button class="btn btn-primary w-100 py-2" type="submit">Войти</button>
+        <input class="btn btn-primary w-100 py-2" type="submit" value="Войти" />
     </form>
-    <p style="text-align:center; margin-top: 8px">Нет аккаунта? <a asp-area="" asp-controller="Account" asp-action="Registration">Зарегистрироваться</a></p>
+    <p style="text-align:center; margin-top: 8px">Нет аккаунта? <a asp-area="" asp-controller="Account" asp-action="Register">Зарегистрироваться</a></p>
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
