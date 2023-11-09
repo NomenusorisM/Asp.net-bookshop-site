@@ -4,18 +4,21 @@ using BookShop.Models;
 using Microsoft.AspNetCore.Identity;
 using BookShop.Db;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
 
 namespace BookShop.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ApplicationContext _context;
     private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationContext _context;
+    private readonly UserManager<User> _userManager;
 
-    public HomeController(ILogger<HomeController> logger, ApplicationContext context)
+    public HomeController(ILogger<HomeController> logger, ApplicationContext context, UserManager<User> userManager)
     {
         _logger = logger;
         _context = context;
+        _userManager = userManager;
     }
 
     [HttpGet]
@@ -56,5 +59,21 @@ public class HomeController : Controller
         _context.Books.Add(book);
         await _context.SaveChangesAsync();
         return RedirectToAction("Index", "Home");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> SendFeedback(Feedback feedback)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user != null)
+        {
+            feedback.SendDate = DateTime.Now;
+            feedback.Title = "ad;fj";
+            feedback.Text = "djlaf";
+            feedback.UserId = user.Id;
+            _context.Feedbacks.Add(feedback);
+        }
+
+        return RedirectToAction("Contact", "Home");
     }
 }

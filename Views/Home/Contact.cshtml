@@ -1,4 +1,5 @@
-﻿@*
+﻿@model BookShop.Models.Feedback
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -26,29 +27,33 @@
 
 </section>
 
-<section class="contact-form">
+@using(Html.BeginForm("SendFeedback", "Home", FormMethod.Post))
+{
+    <section class="contact-form">
 
-    <h5>Напишите нам:</h5>
+        <h5>Напишите нам:</h5>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group col-md-4">
+                <label asp-for="Title">Заголовок:</label>
+                <input asp-for="Title" class="form-control" id="name" name="name" placeholder="Введите заголовок сообщения" required>
+            </div>
 
-    <form action="@Url.Action("SendFeedback", "Home")" method="post">
-
-        <div class="form-group col-md-4">
-            <label for="name">Ваше имя:</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя" required>
-        </div>
-
-        <div class="form-group col-md-4">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Введите адрес электронной почты" required>
-        </div>
-
-        <div class="form-group col-md-4">
-            <label for="message">Сообщение:</label>
-            <textarea id="message" class="form-control" name="message" rows="3" placeholder="Текст сообщения" required></textarea>
-        </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Text">Текст сообщения:</label>
+                <input asp-for="Text" class="form-control" id="email" name="email" placeholder="Введите текст сообщения" required>
+            </div>
             
-        <div class="col-md-2" style="margin-top: 8px">
-            <button class="btn btn-primary w-100 py-2" type="submit">Отправить</button>
-        </div>
-    </form>
-</section>
+            <div class="col-md-2" style="margin-top: 8px">
+                <button class="btn btn-primary w-100 py-2" type="submit">Отправить</button>
+            </div>
+        } else
+        {
+            <label>Для отправки сообщения необходимо авторизоваться!</label>
+            <a asp-controller="Account" asp-action="Login">Вход</a>
+            <a asp-controller="Account" asp-action="Register">Регистрация</a>
+        }
+
+    </section>
+}
